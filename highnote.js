@@ -16,8 +16,7 @@ api.search({ type: 'track', query: songName}, function (error, data) {
         return console.error(error)
     }
     const topResult = data.tracks.items[0];
-    const artistName = 
-    topResult.artists[0].name;
+    const artistName = topResult.artists[0].name;
     const url = topResult.external_urls.spotify;
     const releaseDate = new Date(topResult.album.release_date);
     console.log("\n");
